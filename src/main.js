@@ -6,9 +6,6 @@ import store from './store/index.js';
 import Navbar from '@/components/common/Navbar.vue';
 import Footer from '@/components/common/Footer.vue';
 
-import axios from 'axios';
-
-
 const app = createApp(App);
 app.component('navbar-component', Navbar);
 app.component('footer-component', Footer);
