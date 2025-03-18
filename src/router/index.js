@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Mainpage from '@/views/Mainpage.vue';
 import Signinpage from '@/views/Signinpage.vue';
 import OAuth2CallbackGoogle from '@/views/OAuth2CallbackGoogle.vue';
+import TellYoutStoryPage from '@/views/TellYourStoryPage.vue';
 
 const routes = [
     {
@@ -18,6 +19,11 @@ const routes = [
         path: '/oauth2/callback/google',
         name: 'OAuth2CallbackGoogle',
         component: OAuth2CallbackGoogle,
+    },
+    {
+        path: '/tell-your-story',
+        name: 'TellYoutStoryPage',
+        component: TellYoutStoryPage,
     }
 ];
 
