@@ -30,6 +30,9 @@ export default {
     return {
     }
   },
+  mounted() {
+    this.isSignin;
+  },
   computed: {
     isSignin() {
       return this.$store.getters.getIsSignin;
