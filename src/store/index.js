@@ -1,6 +1,6 @@
 import { createStore } from 'vuex';
 import createPersistedState from 'vuex-persistedstate';
-import loginstore from './modules/loginStore';
+import loginStore from './modules/loginStore';
 
 export default createStore({
     state: {
@@ -16,11 +16,11 @@ export default createStore({
 
     },
     modules: {
-        loginstore,
+        login: loginStore,
     },
     plugins: [
         createPersistedState({
-            paths: ['loginStore'],
+            paths: ['login.isSignin', 'login.access_token', 'login.refresh_token', 'login.user_info'],
         }),
     ]
 });
