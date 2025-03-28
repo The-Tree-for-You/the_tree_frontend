@@ -3,6 +3,7 @@ import Mainpage from '@/views/Mainpage.vue';
 import Signinpage from '@/views/Signinpage.vue';
 import OAuth2CallbackGoogle from '@/views/OAuth2CallbackGoogle.vue';
 import TellYoutStoryPage from '@/views/TellYourStoryPage.vue';
+import Errorpage from '@/views/Errorpage.vue';
 
 const routes = [
     {
@@ -24,6 +25,11 @@ const routes = [
         path: '/tell-your-story',
         name: 'TellYoutStoryPage',
         component: TellYoutStoryPage,
+    },
+    {
+        path: '/:pathMatch(.*)*',
+        name: 'Errorpage',
+        component: Errorpage,
     }
 ];
 
