@@ -24,11 +24,15 @@ export default {
             // 사용자 입력을 받을 변수
             showInput: false,
             userInput: "",
+            isSignin: false,
 
             // 응답 메시지를 담을 배열
             responseParts: [],
             currentIndexRes: 0
         }
+    },
+    mounted() {
+        this.checkSigninStatus();
     },
     methods: {
         // 사용자가 입력한 메시지에 대한 응답을 받는 함수
@@ -59,6 +63,15 @@ export default {
                     clearInterval(interval);
                 }
             }, 3000);
+        },
+        checkSigninStatus() {
+            // 사용자가 로그인했는지 확인하는 함수
+            this.isSignin = this.$store.getters.getIsSignin;
+
+            // 사용자가 로그인하지 않은 경우 401 Error 페이지로 이동
+            if (!this.isSignin) {
+                this.$router.push("/error", { params: { errorType: "401" } });
+            }
         }
     }
 }
