@@ -66,7 +66,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .fade-in {
     @apply opacity-100 transition-opacity duration-1000;
 }
