@@ -70,7 +70,7 @@ export default {
 
             // 사용자가 로그인하지 않은 경우 401 Error 페이지로 이동
             if (!this.isSignin) {
-                this.$router.push("/error", { params: { errorType: "401" } });
+                this.$router.push({name: 'Errorpage', params: { errorType: "401" } });
             }
         }
     }
@@ -78,5 +78,5 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 </style>

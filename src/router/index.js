@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Mainpage from '@/views/Mainpage.vue';
 import Signinpage from '@/views/Signinpage.vue';
 import OAuth2CallbackGoogle from '@/views/OAuth2CallbackGoogle.vue';
-import TellYoutStoryPage from '@/views/TellYourStoryPage.vue';
+import TellYourStoryPage from '@/views/TellYourStoryPage.vue';
 import Errorpage from '@/views/Errorpage.vue';
 
 const routes = [
@@ -23,13 +23,17 @@ const routes = [
     },
     {
         path: '/tell-your-story',
-        name: 'TellYoutStoryPage',
-        component: TellYoutStoryPage,
+        name: 'TellYourStoryPage',
+        component: TellYourStoryPage,
+    },
+    {
+        path: '/error/:errorType',
+        name: 'Errorpage',
+        component: Errorpage,
     },
     {
         path: '/:pathMatch(.*)*',
-        name: 'Errorpage',
-        component: Errorpage,
+        redirect: { name: 'Errorpage', params: { errorType: '404' } },
     }
 ];
 

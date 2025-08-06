@@ -42,6 +42,14 @@ export default {
         Error503,
         Error504,
         ErrorDefault
+    },
+    mounted() {
+        this.errorStatus();
+    },
+    methods: {
+        errorStatus() {
+            console.log(this.errorType);
+        }
     }
 }
 

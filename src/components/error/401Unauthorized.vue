@@ -4,7 +4,7 @@
         <p class="text-lg text-gray-700 mb-6">
             로그인 후 다시 시도해 주세요.
         </p>
-        <a href="/login" class="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+        <a href="/signin" class="px-6 py-3 text-black font-semibold hover:text-bold transition duration-300">
             로그인 페이지로 이동 >>
         </a>
     </div>
@@ -23,5 +23,5 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 </style>
